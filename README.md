@@ -32,8 +32,8 @@ The namespaces installed by the OpenShift AI operator are:
 * Identity Provider, Storage and Internet Access
 * RH Pipelines Operator
 * KServe Dependencies
-* * Red Hat Openshift Serverless
-* * Red Hat Openshift Service Mesh
+  * Red Hat Openshift Serverless
+  * Red Hat Openshift Service Mesh
 
 
 ## Setting Up Openshift AI
@@ -78,9 +78,9 @@ oc get routes rhods-dashboard -n redhat-ods-applications -o jsonpath='{.spec.hos
 ## Openshift AI Operator Objects
 
 * DataScienceCluster: Install Red Hat OpenShift AI components.
-* * Dashboard -> Openshift AI Dashboard + RBAC
+  * Dashboard -> Openshift AI Dashboard + RBAC
 
-## Components
+## Integration Components
 
 * KServe provides a Kubernetes Custom Resource Definition for serving predictive and generative machine learning (ML) models. It aims to solve production model serving use cases by providing high abstraction interfaces for Tensorflow, XGBoost, ScikitLearn, PyTorch, Huggingface Transformer/LLM models using standardized data plane protocols
 

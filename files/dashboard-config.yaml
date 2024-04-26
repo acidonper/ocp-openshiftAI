@@ -1,0 +1,80 @@
+apiVersion: opendatahub.io/v1alpha
+kind: OdhDashboardConfig
+metadata:
+  name: odh-dashboard-config
+spec:
+  dashboardConfig:
+    enablement: true
+    disableBYONImageStream: false
+    disableClusterManager: false
+    disableISVBadges: false
+    disableInfo: false
+    disableSupport: false
+    disableTracking: true
+    disableProjects: true
+    disablePipelines: true
+    disableModelServing: true
+    disableProjectSharing: true
+    disableCustomServingRuntimes: false
+    disableAcceleratorProfiles: true
+    modelMetricsNamespace: ''
+    disablePerformanceMetrics: false
+  notebookController:
+    enabled: true
+  notebookSizes:
+    - name: Small
+      resources:
+        limits:
+          cpu: '2'
+          memory: 2Gi
+        requests:
+          cpu: '1'
+          memory: 1Gi
+    - name: Medium
+      resources:
+        limits:
+          cpu: '4'
+          memory: 4Gi
+        requests:
+          cpu: '2'
+          memory: 2Gi
+    - name: Large
+      resources:
+        limits:
+          cpu: '8'
+          memory: 8Gi
+        requests:
+          cpu: '4'
+          memory: 4Gi
+  modelServerSizes:
+    - name: Small
+      resources:
+        limits:
+          cpu: '2'
+          memory: 8Gi
+        requests:
+          cpu: '1'
+          memory: 4Gi
+    - name: Medium
+      resources:
+        limits:
+          cpu: '8'
+          memory: 10Gi
+        requests:
+          cpu: '4'
+          memory: 8Gi
+    - name: Large
+      resources:
+        limits:
+          cpu: '10'
+          memory: 20Gi
+        requests:
+          cpu: '6'
+          memory: 16Gi
+  groupsConfig:
+    adminGroups: 'rhods-admins'
+    allowedGroups: 'system:authenticated'
+  templateOrder:
+    - 'ovms'
+  templateDisablement:
+    - 'ovms'

@@ -26,9 +26,13 @@ oc get datasciencecluster default-dsc -n redhat-ods-operator
 sleep 1
 
 echo ""
+echo "# Check Openshift AI Dashboard ..."
+oc get pod -n redhat-ods-applications | grep dashboard
+sleep 1
+
+echo ""
 echo "# Check Users ..."
 oc get groups
 sleep 1
 
-echo ""
-sleep 1
+

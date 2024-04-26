@@ -4,12 +4,6 @@ metadata:
   name: default-dsc
   namespace: redhat-ods-operator
 spec:
-  # trustedCABundle:
-  #   managementState: Managed
-  #   customCABundle: |
-  #     -----BEGIN CERTIFICATE-----
-  #     examplebundle123
-  #     -----END CERTIFICATE-----
   components:
     codeflare:
       managementState: Removed

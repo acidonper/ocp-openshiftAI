@@ -1,0 +1,27 @@
+apiVersion: datasciencecluster.opendatahub.io/v1
+kind: DataScienceCluster
+metadata:
+  name: default-dsc
+  namespace: redhat-ods-operator
+spec:
+  # trustedCABundle:
+  #   managementState: Managed
+  #   customCABundle: |
+  #     -----BEGIN CERTIFICATE-----
+  #     examplebundle123
+  #     -----END CERTIFICATE-----
+  components:
+    codeflare:
+      managementState: Removed
+    dashboard:
+      managementState: Managed
+    datasciencepipelines:
+      managementState: Removed
+    kserve:
+      managementState: Removed
+    modelmeshserving:
+      managementState: Removed
+    ray:
+      managementState: Removed
+    workbenches:
+      managementState: Removed

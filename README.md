@@ -75,10 +75,31 @@ sh scripts/check.sh
 oc get routes rhods-dashboard -n redhat-ods-applications -o jsonpath='{.spec.host}'
 ```
 
-## Openshift AI Operator Objects
+## Openshift AI & Operator Objects
 
 * DataScienceCluster: Install Red Hat OpenShift AI components.
-  * Dashboard -> Openshift AI Dashboard + RBAC
+  * Dashboard -> Openshift AI Dashboard + RBAC (_It is possible to personalize the dashboard to meet multiple requirements. Please review the official documentation_)
+
+* OdhDashboardConfig: Configure the Openshift AI Dashboard from an overall point of view
+
+* OdhApplication: Make installed applications accessible for OpenShift AI users
+
+## Data Science Projects
+
+Organize your work in projects and workbenches, create and collaborate on notebooks, train and deploy models, configure model servers, and implement pipelines.
+
+### Notebooks
+
+It is possible to create a blank notebook or import a notebook from a number of different sources.
+
+## Others
+
+* Data Science Projects (projects.project.openshift.io) -> A Data Science Project is synonymous with an OpenShift Project or a Namespace. See the users section for more information on how to create and manage Data Science Projects
+* Workbenches (notebooks.kubeflow.org) -> A workbench is a development environment running in an OpenShift pod that uses the Kubeflow Notebook Controller. Depending on the workbench image, workbenches can run a number of web-based editors, including JupyterLab, Visual Studio Code, and R Studio.
+* Models (inferenceservices.serving.kserve.io) -> Models require a data connection and a location where the model file is stored in the S3 bucket.
+* Model Servers (servingruntimes.serving.kserve.io) -> Models are associated with a specific model server, which host the model and are used to create endpoints. A single model server can serve multiple models from a single instance.
+* Data Connections (secret) -> A data connection is an OpenShift secret that stores the values required to connect to an S3 bucket.
+* Data Science Pipeline Applications (DSPA) (datasciencepipelinesapplications.datasciencepipelinesapplications.opendatahub.io) -> A DSPA creates an instance of a Data Science Pipeline and requires a data connection and an S3 bucket to create the instance. A DSPA is namespace-scoped to prevent leaking data across multiple projects.
 
 ## Integration Components
 

@@ -12,10 +12,18 @@ spec:
     datasciencepipelines:
       managementState: Removed
     kserve:
-      managementState: Removed
+      managementState: Managed
+      serving:
+        ingressGateway:
+          certificate:
+            type: SelfSigned
+        managementState: Managed
+        name: knative-serving
     modelmeshserving:
-      managementState: Removed
+      managementState: Managed
     ray:
       managementState: Removed
     workbenches:
+      managementState: Managed
+    kueue:
       managementState: Removed

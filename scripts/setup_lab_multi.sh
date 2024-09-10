@@ -31,6 +31,7 @@ done
 ##
 # Adding Openshift AI admins
 ##
+oc adm groups new rhods-admins
 for i in $ADMINS
 do
   oc adm groups add-users rhods-admins $i
